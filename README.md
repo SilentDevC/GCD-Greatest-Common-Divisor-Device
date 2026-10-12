@@ -117,7 +117,5 @@ To effectively utilize the `GCD-Greatest-Common-Divisor-Device`, follow these ge
 5.  **Implement (Place & Route)**: For FPGAs, after synthesis, tools will place the gates onto the FPGA fabric and route the connections. This generates the bitstream for programming the device.
 6.  **Deploy**: Program your FPGA with the generated bitstream or include the synthesized netlist in your ASIC design flow.
 
-
-```
 Here is the schematics for the GCD device described in the project.
 ![GCD schematic](GCD_schematic.svg)
