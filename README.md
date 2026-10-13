@@ -17,7 +17,7 @@ A Verilog description of the hardware which is used for running the Greatest Com
 
 ## Description ✨
 
-This repository, `GCD-Greatest-Common-Divisor-Device`, presents a hardware implementation of the Euclidean algorithm for finding the Greatest Common Divisor (GCD) of two numbers. Developed using Verilog HDL, this project aims to provide a clear and efficient digital circuit capable of performing the GCD computation in hardware.The goal of this project is to offer a standalone GCD module which will be able to be incorporated into the other projects.This implementation of the GCD(Greatest-Common-Divisor) algorithm uses the subtraction method. The algorithm goes as follows , compare a and b if the a is greater than b subtract b from a, if b is greater than a subtract a from b. Repeat the subtraction while checking if a equals b and if it is than the greatest common divisor equals a or b. 🛠️
+This repository, `GCD-Greatest-Common-Divisor-Device`, presents a hardware implementation of the Euclidean algorithm for finding the Greatest Common Divisor (GCD) of two numbers. Developed using Verilog HDL, this project aims to provide a clear and efficient digital circuit capable of performing the GCD computation in hardware. The goal of this project is to offer a standalone GCD module which could be reused in other projects. This implementation of the GCD (Greatest-Common-Divisor) algorithm uses the subtraction method. The algorithm: compare a and b. If a > b, replace a with a − b. If b > a, replace b with b − a. Repeat until a == b; that value is the GCD. 🛠️
 
 ## Features 🚀
 
@@ -99,8 +99,6 @@ module TopModule (
 endmodule
 ```
 
-**(Note**: The actual port names and parameters would need to be extracted from the `GCD.v` file.)
-
 ## How to Use 🚀
 
 To effectively utilize the `GCD-Greatest-Common-Divisor-Device`, follow these general steps common to Verilog hardware design projects:
@@ -112,9 +110,16 @@ To effectively utilize the `GCD-Greatest-Common-Divisor-Device`, follow these ge
 5.  **Implement (Place & Route)**: For FPGAs, after synthesis, tools will place the gates onto the FPGA fabric and route the connections. This generates the bitstream for programming the device.
 6.  **Deploy**: Program your FPGA with the generated bitstream or include the synthesized netlist in your ASIC design flow.
 
+
 ## Here is the schematics for the GCD device described in the project. 📊 
 
 ![GCD schematic](GCD_schematic.svg)
+
+
+## This is the waveform which simulates the testbench included in the project.
+
+![gcd_waveform](gcd_waveform.svg)
+
 
 ## License ⚖
 
