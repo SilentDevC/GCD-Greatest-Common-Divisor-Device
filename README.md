@@ -17,7 +17,7 @@ A Verilog description of the hardware which is used for running the Greatest Com
 
 ## Description ✨
 
-This repository, `GCD-Greatest-Common-Divisor-Device`, presents a hardware implementation of the Euclidean algorithm for finding the Greatest Common Divisor (GCD) of two numbers. Developed using Verilog HDL, this project aims to provide a clear and efficient digital circuit capable of performing the GCD computation in hardware. While the specific internal implementation details of `GCD.v` were not available for deep analysis, the project's intent is to offer a reusable module for designers working with FPGAs or ASICs, or students learning about hardware algorithms and Verilog. 🛠️
+This repository, `GCD-Greatest-Common-Divisor-Device`, presents a hardware implementation of the Euclidean algorithm for finding the Greatest Common Divisor (GCD) of two numbers. Developed using Verilog HDL, this project aims to provide a clear and efficient digital circuit capable of performing the GCD computation in hardware.The goal of this project is to offer a standalone GCD module which will be able to be incorporated into the other projects.This implementation of the GCD(Greatest-Common-Divisor) algorithm uses the subtraction method. The algorithm goes as follows , compare a and b if the a is greater than b subtract b from a, if b is greater than a subtract a from b. Repeat the subtraction while checking if a equals b and if it is than the greatest common divisor equals a or b. 🛠️
 
 ## Features 🚀
 
