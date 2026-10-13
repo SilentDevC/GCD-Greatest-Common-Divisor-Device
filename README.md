@@ -13,11 +13,7 @@ A Verilog description of the hardware which is used for running the Greatest Com
 *   [Installation](#installation)
 *   [Usage](#usage)
 *   [How to Use](#how-to-use)
-*   [API Reference](#api-reference)
-*   [Contributing](#contributing)
-*   [License](#license)
-*   [Important Links](#important-links)
-*   [Footer](#footer)
+*   [License](#License)
 
 ## Description ✨
 
@@ -82,24 +78,23 @@ module TopModule (
 
     // ... other logic ...
 
-    wire [7:0] input_a; // Width hardcoded into the device , right now only 8 bits
-    wire [7:0] input_b;
-    wire [7:0] gcd_result;
-    wire start_calculation;
-    wire done_signal;
+    wire [7:0] a; // Width hardcoded into the device , right now only 8 bits
+    wire [7:0] b;
+    wire [7:0] result;
+    wire gcd;
+    wire done;
 
-    GCD #( .DATA_WIDTH(WIDTH) ) u_gcd (
+    GCD u_gcd (
         .clk(your_clock_signal),
         .rst(your_reset_signal),
-        .start(start_calculation),
-        .A(input_a),
-        .B(input_b),
-        .result(gcd_result),
-        .done(done_signal)
+        .start(gcd), // gcd is a external signal used to activate the device 
+        .a(a),
+        .b(b),
+        .result(result),
+        .done(done)
     );
 
-    // ... your control logic for 'start_calculation', 'input_a', 'input_b' ...
-    // ... and using 'gcd_result' when 'done_signal' is high ...
+    // ... your control logic for 'gcd', 'a', 'b' ...
 
 endmodule
 ```
@@ -110,7 +105,7 @@ endmodule
 
 To effectively utilize the `GCD-Greatest-Common-Divisor-Device`, follow these general steps common to Verilog hardware design projects:
 
-1.  **Understand the Module Interface**: Examine `GCD.v` to identify input ports (e.g., `A`, `B` for numbers, `clk`, `rst`, `start`), output ports (e.g., `result`, `done`), and any parameters (e.g., `DATA_WIDTH`).
+1.  **Understand the Module Interface**: Examine `GCD.v` to identify input ports (e.g., `a`, `b` for numbers, `clk`, `reset`, `gcd` as a control signal), output ports (e.g., `result`, `done` used to indicate the completion of the algorithm).
 2.  **Create a Testbench**: Develop a Verilog testbench (`.v` file) to stimulate the `GCD` module with various pairs of numbers and verify its correct operation in a simulator. This involves instantiating the `GCD` module and applying test vectors.
 3.  **Simulate**: Use a Verilog simulator to run your testbench and observe the waveform outputs. This step is crucial for functional verification.
 4.  **Synthesize**: If targeting an FPGA or ASIC, use synthesis tools to translate the `GCD.v` code into a gate-level netlist. This process maps the Verilog logic to the specific hardware resources available on your target device.
@@ -120,3 +115,7 @@ To effectively utilize the `GCD-Greatest-Common-Divisor-Device`, follow these ge
 ## Here is the schematics for the GCD device described in the project. 📊 
 
 ![GCD schematic](GCD_schematic.svg)
+
+## License ⚖
+
+The project is under the **MIT License** 
