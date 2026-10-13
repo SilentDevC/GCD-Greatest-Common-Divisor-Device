@@ -86,8 +86,8 @@ module TopModule (
 
     GCD u_gcd (
         .clk(your_clock_signal),
-        .rst(your_reset_signal),
-        .start(gcd), // gcd is a external signal used to activate the device 
+        .reset(your_reset_signal),
+        .gcd(gcd), // gcd is a external signal used to activate the device 
         .a(a),
         .b(b),
         .result(result),
