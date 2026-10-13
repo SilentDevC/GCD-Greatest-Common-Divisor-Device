@@ -41,7 +41,7 @@ This repository, `GCD-Greatest-Common-Divisor-Device`, presents a hardware imple
 
 ## Installation ⚙️
 
-To use this Verilog GCD module, you generally follow a standard HDL synthesis and simulation workflow. As no specific build scripts or test benches were provided in the analyzed files, the following steps are general guidelines:
+To use this Verilog GCD module, you generally follow a standard HDL synthesis and simulation workflow.
 
 1.  **Clone the Repository**:
 
@@ -50,9 +50,9 @@ To use this Verilog GCD module, you generally follow a standard HDL synthesis an
     cd GCD-Greatest-Common-Divisor-Device
     ```
 
-2.  **Simulation (Optional)**: If you wish to simulate the `GCD.v` module, you will need a Verilog simulator (e.g., Icarus Verilog, ModelSim, VCS). You would typically write a test bench (`.tb` or `_tb.v` file) to instantiate the `GCD` module and provide stimulus.
+2.  **Simulation (Optional)**: If you wish to simulate the `GCD.v` module, you will need a Verilog simulator (e.g., Icarus Verilog, ModelSim, VCS). You would typically write a test bench (or use the one included with the project if you want to test quickly) to instantiate the `GCD` module and provide stimulus.
 
-    *Example Simulation Command (using Icarus Verilog, assuming a `gcd_tb.v` exists):*
+    *Example Simulation Command (using Icarus Verilog, `tb_gcdtest is the name of the testbench module`):*
 
     ```bash
     iverilog -o gcd_sim GCD.v gcd_tb.v
@@ -116,7 +116,7 @@ To effectively utilize the `GCD-Greatest-Common-Divisor-Device`, follow these ge
 ![GCD schematic](GCD_schematic.svg)
 
 
-## This is the waveform which simulates the testbench included in the project. ⚡ 
+## This is the waveform which simulates the testbench included in the project.⚡ 
 
 ![gcd_waveform](gcd_waveform.svg)
 
