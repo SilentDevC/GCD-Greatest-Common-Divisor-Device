@@ -116,7 +116,7 @@ To effectively utilize the `GCD-Greatest-Common-Divisor-Device`, follow these ge
 ![GCD schematic](GCD_schematic.svg)
 
 
-## This is the waveform which simulates the testbench included in the project.
+## This is the waveform which simulates the testbench included in the project. ⚡ 
 
 ![gcd_waveform](gcd_waveform.svg)
 
